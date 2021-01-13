@@ -1,0 +1,177 @@
+
+:root {
+    --background-color: #f5f0f0;
+    --secondary-background-color: #ffe6e6;
+    --third-background-color: #FFD0D7;
+    --font-color: #222;
+    --font-secondary-color: #b84747;
+    --background-image: url("../resources/flower.jpg");
+}
+
+[data-theme="dark"] {
+    --background-color: #0d1a26;
+    --secondary-background-color: #263341;
+    --third-background-color: #4b647e;
+    --font-color: #f5f7fa;
+    --font-secondary-color: #9fb3c8;
+    --background-image: url("../resources/droplets.jpg");
+    --contact-form-image: url("../resources/starlight.jpg");
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--background-color);
+    height: 65px;
+}
+
+.brand-color {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: larger;
+    color: var(--font-color);
+}
+
+.brand-color:hover {
+    color: var(--font-secondary-color);
+}
+
+.nav-color {
+    color: var(--font-color);
+    font-size: large;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.nav-color:hover {
+    color: var(--font-secondary-color);
+    font-size: larger;
+}
+
+/* Jumbotron Image */
+#jumbotron-elements {
+    background-image: var(--background-image);
+    background-size: 100% 100%;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    min-height: 1020px;
+}
+
+/* Toggler */
+.theme-switch-wrapper {
+    float: right;
+}
+
+.theme-switch-wrapper span {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    float: right;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 80px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #f5f0f0;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #f5f0f0;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked + .slider {
+    background-color: #0d1a26;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+    background-color: var(--font-secondary-color);
+}
+
+/* Profile Image */
+.jumbotron img {
+    margin-top: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Icons */
+.icon-wrapper {
+    text-align: center;
+    padding: 30px;
+}
+
+#icons {
+    background: var(--background-color);
+    color: var(--font-color);
+    padding: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+#icons:hover {
+    color: var(--font-secondary-color);
+}
+
+/* Jumbotrons */
+#about-me-jumbotron {
+    background: var(--background-color);
+    color: var(--font-color);
+    opacity: 85%;
+    padding: 30px;
+    height: 300px;
+}
+
+#experiences-jumbotron {
+    background: var(--secondary-background-color);
+    color: var(--font-color);
+    margin-bottom: 0px;
+    padding: 22px;
+}
+
+#projects-jumbotron {
+    background: var(--third-background-color);
+    color: var(--font-color);
+    margin-bottom: 0px;
+    padding: 22px;
+}
+
+footer .jumbotron {
+    background: var(--background-color);
+    margin-bottom: 0px;
+    padding: 22px;
+}

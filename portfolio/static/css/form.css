@@ -1,0 +1,27 @@
+
+#contact-jumbotron {
+    background: var(--secondary-background-color);
+    color: var(--font-color);
+    margin-bottom: 0px;
+    padding: 22px;
+}
+
+h1 {
+    border-bottom: solid;
+    border-color:rgba(255,255,255, 0.6);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    padding: 20px;
+    width: 40%;
+}
+
+.img-fluid {
+    image-background: var(--contact-form-image);
+    height: 100px;
+    width: 100px;
+    float: right;
+}

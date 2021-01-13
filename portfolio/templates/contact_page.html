@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="{% static "/css/form.css" %}">
+</head>
+</body>
+    {% load crispy_forms_tags %}
+    <div class="jumbotron jumbotron-fluid" id="contact-jumbotron">
+        <h1>Contact Me</h1>
+        	<form method="post">
+                {% csrf_token %}
+                {{form | crispy}}
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+        <img class="img-fluid" src="#">
+    </div>
+<body>
+
+</body>
+</html>

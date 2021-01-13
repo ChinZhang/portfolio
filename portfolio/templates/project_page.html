@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid" id="projects-jumbotron">
+        <h1>Projects</h1>
+        <ul>
+            {% for project in projects %}
+            <li>
+                <h2>Title {{ project.title }}</h2>
+                <p>Description: {{ project.description }}</p>
+                <p>Date Started: {{ project.start_date }}</p>
+                <p>Date Ended: {{ project.end_date }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
