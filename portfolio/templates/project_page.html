@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>Projects</title>
+    <link rel="stylesheet" href="{% static "/css/project.css" %}">
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid" id="projects-jumbotron">
+    <div class="container-fluid-sm text-center" id="projects-container">
         <h1>Projects</h1>
-        <ul>
+        <div class="row row-cols-5 justify-content-center">
             {% for project in projects %}
-            <li>
-                <h2>Title {{ project.title }}</h2>
-                <p>Description: {{ project.description }}</p>
-                <p>Date Started: {{ project.start_date }}</p>
-                <p>Date Ended: {{ project.end_date }}</p>
-            </li>
+            <div class="col hvrbox">
+                <h2>{{ project.title }}</h2>
+                <div class="hvrbox-layer_top hvrbox-layer_slidedown">
+                    <div class="hvrbox-text">
+                        <p>{{ project.description }}</p>
+                        <p>{{ project.start_date }}</p>
+                        <div class="btn-group btn-group-justified">
+                            <a href="#" class="btn btn-info btn-block">More Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
+
     </div>
 </body>
 </html>
