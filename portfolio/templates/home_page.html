@@ -12,53 +12,63 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <body data-spy="scroll" data-target=".navbar" data-offset="20">
         <header>
-            <nav class="navbar navbar-expand-sm fixed-top">
-                <a class="navbar-brand" href="#"><div class="brand-color">Chin Zhang</div></a>
+            <nav class="navbar navbar-expand-sm fixed-top" id="navbar">
+                <a class="navbar-brand" href="#section1"><div class="brand-color">Chin Zhang</div></a>
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#"><div class="nav-color">About Me</div></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><div class="nav-color">Experiences</div></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><div class="nav-color">Projects</div></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><div class="nav-color">Contact Me</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section1"><div class="nav-color">About Me</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section2"><div class="nav-color">Experiences</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section3"><div class="nav-color">Projects</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#section4"><div class="nav-color">Contact Me</div></a></li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
-            <div class="jumbotron jumbotron-fluid" id="jumbotron-elements">
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox"/>
-                        <span class="slider round"></span>
-                    </label>
-                    <span>Dark Mode</span>
+            <div id="section1">
+                <div class="jumbotron jumbotron-fluid" id="jumbotron-elements">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox"/>
+                            <span class="slider round"></span>
+                        </label>
+                        <span>Dark Mode</span>
+                    </div>
+
+                    <img src="{% static "/resources/profile-pic.jpg" %}" class="rounded-circle" alt="profile picture" width="180px" height="180px">
+
+                    <div class="icon-wrapper">
+                        <a href="https://github.com/ChinZhang" target="blank" class="fa fa-github" id="icons" ></a>
+                        <a href="https://www.linkedin.com/in/chin-zhang-436b48164/" target="blank" class="fa fa-linkedin" id="icons"></a>
+                        <a href="https://www.instagram.com/drachix_x/" target="blank" class="fa fa-instagram" id="icons"></a>
+                        <a href="mailto:chinzh00@gmail.com" class="fa fa-google" id="icons"></a>
+                    </div>
+
+                    <div class="jumbotron jumbotron-fluid" id="about-me-jumbotron">
+                        <h2>About Me</h2>
+                        <p>Welcome to my portfolio page. Please take a look around and enjoy your experience.
+                            I am a junior majoring in Computer Science and minoring in Chinese at the University of Georgia with a certificate
+                            of applied data science. I am someone who loves creating, learning and growing. Some of my hobbies include drawing,
+                            baking, photography and programming. I love seeing ideas come to life and that is why I love computer science.
+                            </p>
+                    </div>
                 </div>
-
-                <img src="{% static "/resources/profile-pic.jpg" %}" class="rounded-circle" alt="profile picture" width="180px" height="180px">
-
-                <div class="icon-wrapper">
-                    <a href="https://github.com/ChinZhang" target="blank" class="fa fa-github" id="icons" ></a>
-                    <a href="https://www.linkedin.com/in/chin-zhang-436b48164/" target="blank" class="fa fa-linkedin" id="icons"></a>
-                    <a href="https://www.instagram.com/drachix_x/" target="blank" class="fa fa-instagram" id="icons"></a>
-                    <a href="mailto:chinzh00@gmail.com" class="fa fa-google" id="icons"></a>
-                </div>
-
-                <div class="jumbotron jumbotron-fluid" id="about-me-jumbotron">
-                    <h2>About Me</h2>
-                    <p>Welcome to my portfolio page. Please take a look around and enjoy your experience.
-                        I am a junior majoring in Computer Science and minoring in Chinese at the University of Georgia with a certificate
-                        of applied data science. I am someone who loves creating, learning and growing. Some of my hobbies include drawing,
-                        baking, photography and programming. I love seeing ideas come to life and that is why I love computer science.
-                        </p>
-                </div>
-
             </div>
 
-            {% include 'experiences_page.html' %}
-            {% include 'project_page.html'%}
-            {% include 'contact_page.html'%}
+            <div id="section2">
+                {% include 'experiences_page.html' %}
+            </div>
+
+            <div id="section3">
+                {% include 'project_page.html'%}
+            </div>
+
+            <div id="section4">
+                {% include 'contact_page.html'%}
+            </div>
+
         </main>
         <footer>
             <div class="jumbotron jumbotron-fluid">
@@ -67,4 +77,5 @@
         </footer>
     </body>
 <script src="{% static "/js/main.js" %}"></script>
+<script src="{% static "/js/scroll.js" %}"></script>
 </html>
