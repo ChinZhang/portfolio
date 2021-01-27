@@ -21,4 +21,5 @@ urlpatterns = [
     path('', views.landing),
     path('admin/', admin.site.urls),
     path('home/', views.home),
+    path('home/projects/<str:title>/', views.project_by_title)
 ]

@@ -26,6 +26,8 @@ div h2 {
 	overflow: hidden;
 	max-width: 100%;
 	height: auto;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .hvrbox img {
@@ -60,7 +62,7 @@ div h2 {
 
 .hvrbox .hvrbox-text {
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
 	display: inline-block;
 	position: absolute;
 	top: 50%;

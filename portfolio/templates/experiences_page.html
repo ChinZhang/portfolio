@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <title>Projects</title>
+    <link rel="stylesheet" href="{% static "/css/experiences.css" %}">
 </head>
 <body>
-    <div class="jumbotron jumbotron-fluid" id="experiences-jumbotron">
+    <div class="container-fluid-sm text-center" id="experiences-container">
         <h1>Experiences</h1>
+        <div class="timeline">
+            {% for experience in experiences %}
+
+        {% endfor %}
+        </div>
     </div>
 </body>
 </html>

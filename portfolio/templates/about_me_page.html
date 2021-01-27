@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="{% static "/css/aboutme.css" %}">
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid" id="jumbotron-elements">
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox"/>
+                <span class="slider round"></span>
+            </label>
+            <span>Dark Mode</span>
+        </div>
+
+        <img src="{% static "/resources/profile-pic.jpg" %}" class="rounded-circle" alt="profile picture" width="180px" height="180px">
+
+        <div class="icon-wrapper">
+            <a href="https://github.com/ChinZhang" target="blank" class="fa fa-github" id="icons" ></a>
+            <a href="https://www.linkedin.com/in/chin-zhang-436b48164/" target="blank" class="fa fa-linkedin" id="icons"></a>
+            <a href="https://www.instagram.com/drachix_x/" target="blank" class="fa fa-instagram" id="icons"></a>
+            <a href="mailto:chinzh00@gmail.com" class="fa fa-google" id="icons"></a>
+        </div>
+
+        <div class="jumbotron jumbotron-fluid" id="about-me-jumbotron">
+            <h2>About Me</h2>
+            <p>Welcome to my portfolio page. Please take a look around and enjoy your experience.
+                I am a junior majoring in Computer Science and minoring in Chinese at the University of Georgia with a certificate
+                of applied data science. I am someone who loves creating, learning and growing. Some of my hobbies include drawing,
+                baking, photography and programming. I love seeing ideas come to life and that is why I love computer science.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

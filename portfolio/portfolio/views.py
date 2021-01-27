@@ -46,12 +46,18 @@ def home(request):
 
 
 def project_page():
-    projects = Project.objects.order_by('start_date')
+    projects = Project.objects.order_by('date')
     return projects
 
 
 def contact():
     form = ContactForm
     return form
+
+
+def project_by_title(request):
+    projects = project_page()
+    return render(request, '../templates/project_description.html', projects)
+
 
 

@@ -1,0 +1,63 @@
+
+:root {
+    --background-color: #f5f0f0;
+    --secondary-background-color: #FFFAFA;
+    --third-background-color: #FFD0D7;
+    --font-color: #222;
+    --font-secondary-color: #b84747;
+    --border-color: rgba(0, 0, 0, 0.5);
+    --background-image: url("../resources/flower.jpg");
+}
+
+[data-theme="dark"] {
+    --background-color: #0d1a26;
+    --secondary-background-color: #263341;
+    --third-background-color: #4b647e;
+    --font-color: #f5f7fa;
+    --font-secondary-color: #9fb3c8;
+    --border-color: rgba(255,255,255, 0.6);
+    --background-image: url("../resources/droplets.jpg");
+    --contact-form-image: url("../resources/starlight.jpg");
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: var(--background-color);
+    height: 65px;
+}
+
+.brand-color {
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: larger;
+    color: var(--font-color);
+}
+
+.brand-color:hover {
+    color: var(--font-secondary-color);
+}
+
+.nav-color {
+    color: var(--font-color);
+    font-size: large;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+.nav-color:hover {
+    color: var(--font-secondary-color);
+    font-size: larger;
+}
+
+h1 {
+    border-bottom: solid;
+    border-color: var(--border-color);
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+footer .jumbotron {
+    background: var(--background-color);
+    margin-bottom: 0px;
+    padding: 22px;
+}
