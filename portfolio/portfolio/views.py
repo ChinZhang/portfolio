@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from project.models import Project
+from experience.models import Experience
 from contact.forms import ContactForm
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
@@ -10,10 +11,14 @@ def landing(request):
     return render(request, '../templates/landing_page.html')
 
 
+# Shows the homepage
 def home(request):
-    projects = project_page()
+    # Calls functions for each section in the homepage
+    experiences = experience_section()
+    projects = project_section()
     form = ContactForm
 
+    # Handles information from the contact form
     if request.method == 'POST':
         form = form(data=request.POST)
 
@@ -41,23 +46,25 @@ def home(request):
             email.send()
             return HttpResponse('Thanks for contacting me!')
 
-    context = {'form': form, 'projects': projects}
+    # Renders all the subsections into the homepage template
+    context = {'form': form, 'projects': projects, 'experiences': experiences}
     return render(request, '../templates/home_page.html', context)
 
 
-def project_page():
+# Creating the view for experience subsection
+def experience_section():
+    experiences = Experience.objects.order_by('year')
+    return experiences
+
+
+# Creating the view for the project section
+def project_section():
     projects = Project.objects.order_by('date')
     return projects
 
 
-def contact():
+# Creating the view for the contact form section
+def contact_section():
     form = ContactForm
     return form
-
-
-def project_by_title(request):
-    projects = project_page()
-    return render(request, '../templates/project_description.html', projects)
-
-
 

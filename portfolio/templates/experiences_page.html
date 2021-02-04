@@ -2,17 +2,35 @@
 <html lang="en">
 {% load static %}
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Projects</title>
     <link rel="stylesheet" href="{% static "/css/experiences.css" %}">
 </head>
 <body>
-    <div class="container-fluid-sm text-center" id="experiences-container">
+    <div class="container-fluid-sm" id="experiences-container">
         <h1>Experiences</h1>
-        <div class="timeline">
-            {% for experience in experiences %}
-
-        {% endfor %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-timeline">
+                        {% for experience in experiences %}
+                        <div class="timeline">
+                            <a href="#" class="timeline-content">
+                                <div class="timeline-year">
+                                <span>{{ experience.year }}</span>
+                                </div>
+                                <h3 class="title">{{ experience.title }}</h3>
+                                <div class="timeline-icon">
+                                    <i class="fa fa-rocket"></i>
+                                </div>
+                                <p class="description">{{ experience.description }}</p>
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
