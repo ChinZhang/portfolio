@@ -8,13 +8,20 @@
 </head>
 </body>
     {% load crispy_forms_tags %}
-    <div class="jumbotron jumbotron-fluid" id="contact-jumbotron">
+    <div class="jumbotron jumbotron-fluid center" id="contact-jumbotron">
         <h1>Contact Me</h1>
-        	<form method="post">
-                {% csrf_token %}
-                {{form | crispy}}
-                <button type="submit" class="btn btn-success">Submit</button>
-            </form>
+            <div class="container-sm" id="form-container">
+                <div class="form-header">
+                    <a href="mailto:chinzh00@gmail.com" class="fa fa-envelope" id="envelope"></a>
+                    <p><b>Have any questions or comments? </b></p>
+                    <p>Feel free to contact me using the mail icon or fill out the form below!</p>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    {{form | crispy}}
+                    <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                </form>
+            </div>
     </div>
 <body>
 

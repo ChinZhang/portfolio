@@ -6,15 +6,38 @@
     padding: 30px;
 }
 
-form {
+#form-container {
+    background-color: darkblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
-    padding: 20px;
-    width: 40%;
+    max-width: 800px;
+    margin-top: 40px;
+    margin-bottom: 35px;
 }
 
-.img-fluid {
-    image-background: var(--contact-form-image);
-    height: 100px;
-    width: 100px;
-    float: right;
+.form-header {
+    padding: 10px;
 }
+
+#envelope {
+    color: var(--font-color);
+    padding: 10px;
+    font-size: 40px;
+    text-decoration: none;
+}
+
+#envelope:hover {
+    color: var(--font-secondary-color);
+}
+
+form {
+    border-top: 2px solid white;
+    padding: 30px 50px 50px;
+}
+
+.form-group {
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
