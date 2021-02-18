@@ -2,7 +2,7 @@
 #projects-container {
     background: var(--third-background-color);
     color: var(--font-color);
-	padding: 40px;
+	padding: 30px;
 }
 
 .col {
@@ -10,6 +10,7 @@
     padding: 50px;
     margin: 11px;
 	height: auto;
+	min-width: 375px;
 }
 
 .row {

@@ -21,10 +21,14 @@
 }
 
 /* Navigation Bar */
-.navbar {
-    background-color: var(--background-color);
-    height: 65px;
-}
+ .navbar {
+     margin-bottom: 0;
+     background-color: var(--background-color);
+     border: 0;
+     letter-spacing: 4px;
+     border-radius: 0;
+     height: 65px;
+  }
 
 .brand-color {
     padding-left: 10px;
@@ -47,6 +51,14 @@
 .nav-color:hover {
     color: var(--font-secondary-color);
     font-size: larger;
+}
+
+.navbar li a{
+    background-color: var(--background-color);
+}
+
+.navbar-toggler {
+    background-color: var(--font-color) !important;
 }
 
 h1 {

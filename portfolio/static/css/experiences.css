@@ -2,6 +2,12 @@
     background: var(--secondary-background-color);
     color: var(--font-color);
     margin-bottom: 0px;
+    padding: 30px;
+}
+
+/* Timeline */
+.timeline-container {
+    padding: 10px;
 }
 
 .main-timeline:after{
@@ -134,6 +140,7 @@
     color: #4B49C3;
 }
 
+/* Reponsiveness for Timeline */
 @media screen and (max-width:767px){
     .main-timeline .timeline,
     .main-timeline .timeline:nth-child(even){
@@ -149,6 +156,7 @@
         transform: translateX(-50%);
     }
 }
+
 @media screen and (max-width:567px){
     .main-timeline .title{ font-size: 18px; }
 }
