@@ -11,11 +11,9 @@
     <div class="jumbotron jumbotron-fluid center" id="contact-jumbotron">
         <h1>Contact Me</h1>
             <div class="container-sm" id="form-container">
-                <div class="form-header">
                     <a href="mailto:chinzh00@gmail.com" class="fa fa-envelope" id="envelope"></a>
                     <p><b>Have any questions or comments? </b></p>
                     <p>Feel free to contact me using the mail icon or fill out the form below!</p>
-                </div>
                 <form method="post">
                     {% csrf_token %}
                     {{form | crispy}}

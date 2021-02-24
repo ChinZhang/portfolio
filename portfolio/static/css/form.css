@@ -13,10 +13,7 @@
     max-width: 800px;
     margin-top: 40px;
     margin-bottom: 35px;
-}
-
-.form-header {
-    padding: 10px;
+    padding: 35px;
 }
 
 #envelope {
@@ -30,14 +27,11 @@
     color: var(--font-secondary-color);
 }
 
-form {
-    border-top: 2px solid white;
-    padding: 30px 50px 50px;
-}
 
 .form-group {
     padding-top: 5px;
     padding-bottom: 5px;
 
 }
+
 

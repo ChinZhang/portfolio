@@ -10,6 +10,11 @@
     padding: 10px;
 }
 
+.row {
+    max-width: 1200px;
+    margin: auto;
+}
+
 .main-timeline:after{
     content: '';
     display: block;
