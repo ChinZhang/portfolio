@@ -9,28 +9,18 @@
 <body>
     <div class="container-fluid-sm text-center" id="projects-container">
         <h1>Projects</h1>
-        <p>Since I have just started to learn how to build applications, I do not have much projects but my
-            my understanding has definitely expanded after taking web development and I am excited to build more
-            full-stack projects with my understanding of how the web works and how applications are deployed.
-            I have so many ideas like building a personal website for my interests for art and photography
-            and I also want to build a efficient art topic or character randomizer website or app.</p>
-        <div class="row row-cols-5 justify-content-center">
-            {% for project in projects %}
-            <div class="col hvrbox">
-                <h2 class="project-title">{{ project.title }}</h2>
-                <div class="hvrbox-layer_top hvrbox-layer_slidedown">
-                    <div class="hvrbox-text">
-                        <p>{{ project.technology }}</p>
-                        <p>{{ project.date }}</p>
-                        <div class="btn-group btn-group-justified">
-                            <a href="#" class="btn btn-info btn-block">More Details</a>
-                        </div>
-                    </div>
+        <div class="row row-cols-5">
+        {% for project in projects %}
+            <div class="card">
+                <div class="card-header"><h5>{{ project.title }}</h5></div>
+                <div class="card-body card-color">
+                    <p class="card-text">{{ project.technology }}</p>
+                    <p class="card-text">{{ project.date }}</p>
+                    <a href="#" class="btn btn-primary">More information</a>
                 </div>
             </div>
             {% endfor %}
         </div>
-
-    </div>
+        </div>
 </body>
 </html>
