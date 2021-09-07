@@ -59,7 +59,7 @@ def experience_section():
 
 # Creating the view for the project section
 def project_section():
-    projects = Project.objects.order_by('date')
+    projects = Project.objects.order_by('year').reverse()
     return projects
 
 
