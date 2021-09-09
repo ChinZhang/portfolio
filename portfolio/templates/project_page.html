@@ -9,20 +9,29 @@
 <body>
     <div class="container-fluid-sm text-center" id="projects-container">
         <h1>Projects</h1>
-        <div class="row row-cols-4">
-            {% for project in projects %}
-            <div class="col d-flex">
-                <div class="card project-card">
-                    <div class="card-header"><h5>{{ project.title }}</h5></div>
-                    <div class="card-body">
-                        <p class="card-text">{{ project.technology }}</p>
-                        <p class="card-text">{{ project.year }}</p>
-                        <a href="#" class="btn btn-primary">More information</a>
+        <div class="container project-container">
+            <div class="row row-cols-4">
+                {% for project in projects %}
+                <div class="col d-flex">
+                    <div class="card project-card">
+                        <div class="card-header"><h5>{{ project.1.title }}</h5></div>
+                        <div class="card-body">
+                            <p class="card-text">{{ project.technology }}</p>
+                            <span class="bottom">
+                                <p class="card-text">{{ project.year }}</p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#projectModal">
+                                    More information
+                                </button>
+                            </span>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-        </div>
+    </div>
+
+    {% include 'project_modal.html' %}
+
 </body>
 </html>

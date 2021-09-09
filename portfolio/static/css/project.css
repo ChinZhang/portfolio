@@ -4,8 +4,16 @@
 	padding: 30px;
 }
 
+h1 {
+    color: var(--font-color)
+}
+
 .col {
    padding: 0px;
+}
+
+.project-container {
+    padding-top: 20px;
 }
 
 .project-card {
@@ -13,6 +21,9 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 10px;
     width: 270px;
+}
+
+.bottom {
 }
 
 
