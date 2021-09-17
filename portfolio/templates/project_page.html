@@ -15,7 +15,7 @@
 
             let image = document.getElementById("first-image");
             let imageURL = modalInformation.getAttribute("data-value-image");
-
+            imageURL = "../static/" + imageURL.split("/").slice(-1)[0];
             image.setAttribute("src", imageURL);
         }
     </script>
