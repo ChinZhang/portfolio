@@ -1,6 +1,6 @@
 
 #projects-container {
-    background: var(--third-background-color);
+    background: var(--secondary-background-color);
 	padding: 30px;
 }
 
@@ -18,7 +18,7 @@ h1 {
 
 .project-card {
     min-height: 220px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: var(--shadow);
     margin: 10px;
     width: 270px;
 }

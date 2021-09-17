@@ -1,14 +1,17 @@
 
 :root {
-    --background-color: #f5f0f0;
-    --secondary-background-color: #FFFAFA;
-    --third-background-color: #FFD0D7;
+    --background-color: #F5F5F5;
+    --secondary-background-color: #ffffff;
+    --third-background-color: #F5F5F5;
     --font-color: #222;
     --font-secondary-color: #b84747;
     --border-color: rgba(0, 0, 0, 0.5);
     --background-image: url("../resources/flower.jpg");
     --background-image-medium: url("../resources/flower-medium.jpg");
     --background-image-small: url("../resources/flower-small.jpg");
+    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+;
+
 }
 
 [data-theme="dark"] {
@@ -19,9 +22,10 @@
     --font-secondary-color: #9fb3c8;
     --border-color: rgba(255,255,255, 0.6);
     --background-image: url("../resources/droplets.jpg");
-    --background-image-medium: url("../resources/droplets-medium.jpg");
-    --background-image-small: url("../resources/droplets-small.jpg");
-
+    --background-image-medium: url("../resources/droplets_medium.jpg");
+    --background-image-small: url("../resources/droplets_small.jpg");
+    --shadow: -1px 6px 13px 0px rgba(0,0,0,0.44);
+;
 }
 
 p {

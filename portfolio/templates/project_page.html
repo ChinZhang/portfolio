@@ -5,6 +5,20 @@
     <meta charset="UTF-8">
     <title>Projects</title>
     <link rel="stylesheet" href="{% static "/css/project.css" %}">
+    <script>
+        function loadModal(modalInformation) {
+            let title = document.getElementById("project-title");
+            title.innerHTML = modalInformation.getAttribute("data-value-title");
+
+            let description = document.getElementById("project-description");
+            description.innerHTML = modalInformation.getAttribute("data-value-description");
+
+            let image = document.getElementById("first-image");
+            let imageURL = modalInformation.getAttribute("data-value-image");
+
+            image.setAttribute("src", imageURL);
+        }
+    </script>
 </head>
 <body>
     <div class="container-fluid-sm text-center" id="projects-container">
@@ -14,12 +28,16 @@
                 {% for project in projects %}
                 <div class="col d-flex">
                     <div class="card project-card">
-                        <div class="card-header"><h5>{{ project.1.title }}</h5></div>
+                        <div class="card-header"><h5>{{ project.title }}</h5></div>
                         <div class="card-body">
                             <p class="card-text">{{ project.technology }}</p>
                             <span class="bottom">
                                 <p class="card-text">{{ project.year }}</p>
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#projectModal">
+                                <button type="button" class="btn btn-primary" onclick="loadModal(this)"
+                                        data-value-title="{{ project.title }}"
+                                        data-value-description="{{ project.description }}"
+                                        data-value-image="{{ project.image }}"
+                                        data-toggle="modal" data-target="#projectModal">
                                     More information
                                 </button>
                             </span>
