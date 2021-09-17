@@ -13,6 +13,9 @@
             let description = document.getElementById("project-description");
             description.innerHTML = modalInformation.getAttribute("data-value-description");
 
+            let experience = document.getElementById("project-experience");
+            experience.innerHTML = modalInformation.getAttribute("data-value-experience");
+
             let image = document.getElementById("first-image");
             let imageURL = modalInformation.getAttribute("data-value-image");
             imageURL = "../static/" + imageURL.split("/").slice(-1)[0];
@@ -37,6 +40,7 @@
                                         data-value-title="{{ project.title }}"
                                         data-value-description="{{ project.description }}"
                                         data-value-image="{{ project.image }}"
+                                        data-value-experience="{{ project.experience }}"
                                         data-toggle="modal" data-target="#projectModal">
                                     More information
                                 </button>
