@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{% static "/css/experiences.css" %}">
 </head>
 <body>
-    <div class="container-fluid-sm" id="experiences-container">
+    <div class="container-fluid" id="experiences-container">
         <h1>Experiences</h1>
         <div class="timeline-container">
             <div class="row">
@@ -16,15 +16,19 @@
                     <div class="main-timeline">
                         {% for experience in experiences %}
                         <div class="timeline">
-                            <a href="#" class="timeline-content">
+                            <a class="timeline-content">
                                 <div class="timeline-year">
-                                <span>{{ experience.year }}</span>
+                                    <span>{{ experience.year }}</span>
                                 </div>
-                                <h3 class="title">{{ experience.title }}</h3>
+                                <h5 class="title">
+                                    {{ experience.title }}
+                                </h5>
+                                <h4>{{ experience.company }}</h4>
                                 <div class="timeline-icon">
-                                    <i class="fa fa-rocket"></i>
+                                    <i class="{{ experience.icon }}"></i>
                                 </div>
-                                <p class="description">{{ experience.description }}</p>
+                                <span><b>{{ experience.date_range }}</b></span>
+                                <p class="description">{{ experience.description|linebreaks}}</p>
                             </a>
                         </div>
                         {% endfor %}

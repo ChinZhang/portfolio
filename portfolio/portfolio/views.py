@@ -53,7 +53,7 @@ def home(request):
 
 # Creating the view for experience subsection
 def experience_section():
-    experiences = Experience.objects.order_by('year')
+    experiences = Experience.objects.order_by('year').reverse()
     return experiences
 
 

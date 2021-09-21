@@ -5,6 +5,8 @@
     --third-background-color: #F5F5F5;
     --font-color: #222;
     --font-secondary-color: #b84747;
+    --background-gradient: linear-gradient(to right,#ff3333,#FF69B4);
+    --icon-color: #ff3333;
     --border-color: rgba(0, 0, 0, 0.5);
     --background-image: url("../resources/flower.jpg");
     --background-image-medium: url("../resources/flower-medium.jpg");
@@ -20,6 +22,8 @@
     --third-background-color: #4b647e;
     --font-color: #f5f7fa;
     --font-secondary-color: #9fb3c8;
+    --background-gradient: linear-gradient(to right,#121365,#4546D0);
+    --icon-color: #121365;
     --border-color: rgba(255,255,255, 0.6);
     --background-image: url("../resources/droplets.jpg");
     --background-image-medium: url("../resources/droplets_medium.jpg");
@@ -29,7 +33,7 @@
 }
 
 p {
-    font-size: 19px;
+    font-size: 18px;
 }
 
 /* Navigation Bar */
