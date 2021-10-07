@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from project.models import Project
+from project.models import ProjectImage
 from experience.models import Experience
 from contact.forms import ContactForm
 from django.template.loader import get_template
@@ -16,6 +17,9 @@ def home(request):
     # Calls functions for each section in the homepage
     experiences = experience_section()
     projects = project_section()
+    # TODO: figure out how to past id from modal into here
+    project = get_object_or_404(Project, id=3)
+    photos = ProjectImage.objects.filter(project=project)
     form = ContactForm
 
     # Handles information from the contact form
@@ -47,7 +51,7 @@ def home(request):
             return HttpResponse('Thanks for contacting me!')
 
     # Renders all the subsections into the homepage template
-    context = {'form': form, 'projects': projects, 'experiences': experiences}
+    context = {'form': form, 'projects': projects, 'experiences': experiences, 'project': project, 'photos': photos}
     return render(request, '../templates/home_page.html', context)
 
 
