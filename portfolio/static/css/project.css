@@ -8,22 +8,31 @@ h1 {
     color: var(--font-color)
 }
 
-.col {
-   padding: 0px;
-}
-
 .project-container {
     padding-top: 20px;
 }
 
 .project-card {
-    min-height: 220px;
     box-shadow: var(--shadow);
-    margin: 10px;
-    width: 270px;
+    margin: 15px;
+    padding: 0;
+    border: none;
+    max-width: 300px;
 }
 
-.bottom {
+.cards-container {
+    margin-top: 35px;
 }
+
+.card-header {
+    background: var(--background-gradient);
+    padding: 10px;
+}
+
+h5 {
+    color: white;
+}
+
+
 
 

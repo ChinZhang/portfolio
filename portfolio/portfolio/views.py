@@ -17,9 +17,7 @@ def home(request):
     # Calls functions for each section in the homepage
     experiences = experience_section()
     projects = project_section()
-    # TODO: figure out how to past id from modal into here
-    project = get_object_or_404(Project, id=3)
-    photos = ProjectImage.objects.filter(project=project)
+    photos = project_images()
     form = ContactForm
 
     # Handles information from the contact form
@@ -51,7 +49,7 @@ def home(request):
             return HttpResponse('Thanks for contacting me!')
 
     # Renders all the subsections into the homepage template
-    context = {'form': form, 'projects': projects, 'experiences': experiences, 'project': project, 'photos': photos}
+    context = {'form': form, 'projects': projects, 'experiences': experiences, 'photos': photos}
     return render(request, '../templates/home_page.html', context)
 
 
@@ -65,6 +63,12 @@ def experience_section():
 def project_section():
     projects = Project.objects.order_by('year').reverse()
     return projects
+
+
+# Loading images for all projects
+def project_images():
+    photos = ProjectImage.objects.all()
+    return photos
 
 
 # Creating the view for the contact form section
