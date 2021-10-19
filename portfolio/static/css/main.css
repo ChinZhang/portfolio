@@ -1,18 +1,19 @@
 
 :root {
     --background-color: #F5F5F5;
-    --secondary-background-color: #ffffff;
-    --third-background-color: #F5F5F5;
+    --secondary-background-color: #fffafc;
+    --third-background-color: #dd5f88;
     --font-color: #222;
-    --font-secondary-color: #d80000 ;
-    --background-gradient: linear-gradient(to right,#ff3333,#FF69B4);
+    --font-secondary-color: #dd5f88 ;
+    --background-gradient: linear-gradient(to right,#dd5f88,#db2561);
     --icon-color: #ff3333;
     --border-color: black;
+    --button-color: #e6004a;
+    --hover-button-color: #c2003e;
     --background-image: url("../resources/flower.jpg");
     --background-image-medium: url("../resources/flower-medium.jpg");
     --background-image-small: url("../resources/flower-small.jpg");
     --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-;
 
 }
 
@@ -22,14 +23,15 @@
     --third-background-color: #4b647e;
     --font-color: #f5f7fa;
     --font-secondary-color: #9fb3c8;
-    --background-gradient: linear-gradient(to right,#121365,#4546D0);
+    --background-gradient: linear-gradient(to right,#4b647e,#6a8bad);
     --icon-color: #121365;
     --border-color: white;
+    --button-color: #007bff;
+    --hover-button-color: #0069d9;
     --background-image: url("../resources/droplets.jpg");
     --background-image-medium: url("../resources/droplets_medium.jpg");
     --background-image-small: url("../resources/droplets_small.jpg");
     --shadow: -1px 6px 13px 0px rgba(0,0,0,0.44);
-;
 }
 
 p {

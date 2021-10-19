@@ -29,10 +29,34 @@ h1 {
     padding: 10px;
 }
 
-h5 {
+.card-header {
     color: white;
 }
 
+.text-container {
+    margin-top: 25px;
+}
+
+.card-body {
+    padding-bottom: 10px;
+}
+
+.card-footer {
+    padding-bottom: 20px;
+    padding-top: 0px;
+    background-color: white;
+    border-top: none;
+}
+
+.btn-primary {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--hover-button-color);
+    border-color: var(--button-color);
+}
 
 
 

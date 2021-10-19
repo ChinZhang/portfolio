@@ -3,15 +3,14 @@
 {% load static %}
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
 </head>
 <body>
 
 <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-xl" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title">{{ project.title }}</h2>
+                <div class="modal-header modal-color">
+                    <span class="modal-title h3">{{ project.title }}</span>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -39,10 +38,12 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                    <h5>Description</h5>
-                    <p>{{ project.description }}</p>
-                    <h5>My Experience</h5>
-                    <p>{{ project.experience }}</p>
+                    <div class="text-container">
+                        <h4>Description</h4>
+                        <p>{{ project.description|linebreaks }}</p>
+                        <h4>My Experience</h4>
+                        <p>{{ project.experience|linebreaks }}</p>
+                    </div>
                 </div>
             </div>
         </div>
