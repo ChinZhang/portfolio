@@ -16,20 +16,23 @@
                     <div class="main-timeline">
                         {% for experience in experiences %}
                         <div class="timeline">
-                            <a class="timeline-content">
+                            <div class="timeline-content">
                                 <div class="timeline-year">
                                     <span>{{ experience.year }}</span>
                                 </div>
                                 <h5 class="title">
                                     {{ experience.title }}
                                 </h5>
-                                <h4>{{ experience.company }}</h4>
+                                <h5>{{ experience.company }}</h5>
+                                <span>{{ experience.location }}</span>
                                 <div class="timeline-icon">
-                                    <i class="{{ experience.icon }}"></i>
+                                        <a href="{{ experience.link }}" target="blank">
+                                            <i id="experience-icons" class="{{ experience.icon }}"></i>
+                                        </a>
                                 </div>
                                 <span><b>{{ experience.date_range }}</b></span>
                                 <p class="description">{{ experience.description|linebreaks}}</p>
-                            </a>
+                            </div>
                         </div>
                         {% endfor %}
                     </div>

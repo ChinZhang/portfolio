@@ -5,6 +5,8 @@ from django.db import models
 class Experience(models.Model):
     title = models.TextField(default='')
     company = models.TextField(blank=True)
+    location = models.TextField(default='')
+    link = models.URLField(default='')
     description = models.TextField(default='')
     date_range = models.TextField(default='')
     icon = models.TextField(default='')

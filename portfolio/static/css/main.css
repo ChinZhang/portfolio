@@ -7,7 +7,7 @@
     --font-secondary-color: #b51f4f;
     --background-gradient: linear-gradient(to right,#dd5f88,#de3c71);
     --background-gradient-contact: linear-gradient(to bottom right,#dd5f88,#de3c71);
-    --icon-color: #de3c71;
+    --icon-color: #e6004a;
     --border-color: black;
     --button-color: #e6004a;
     --hover-button-color: #c2003e;
@@ -26,7 +26,7 @@
     --font-secondary-color: #9fb3c8;
     --background-gradient: linear-gradient(to right,#4b647e,#6a8bad);
     --background-gradient-contact: linear-gradient(to bottom right,#4b647e,#6a8bad);
-    --icon-color: #4b647e;
+    --icon-color: #007bff;
     --border-color: white;
     --button-color: #007bff;
     --hover-button-color: #0069d9;
@@ -111,6 +111,16 @@ footer .jumbotron {
 .btn:active, .btn:hover {
     color: white;
     border-color: var(--button-color);
+}
+
+#experience-icons:hover {
+    color: var(--hover-button-color);
+    text-decoration: none;
+}
+
+#experience-icons {
+    text-decoration: none;
+    color: var(--button-color);
 }
 
 .btn-custom {
