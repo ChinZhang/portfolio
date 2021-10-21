@@ -4,8 +4,9 @@
     --secondary-background-color: #fffafc;
     --third-background-color: #dd5f88;
     --font-color: #222;
-    --font-secondary-color: #dd5f88;
+    --font-secondary-color: #b51f4f;
     --background-gradient: linear-gradient(to right,#dd5f88,#de3c71);
+    --background-gradient-contact: linear-gradient(to bottom right,#dd5f88,#de3c71);
     --icon-color: #de3c71;
     --border-color: black;
     --button-color: #e6004a;
@@ -24,6 +25,7 @@
     --font-color: #f5f7fa;
     --font-secondary-color: #9fb3c8;
     --background-gradient: linear-gradient(to right,#4b647e,#6a8bad);
+    --background-gradient-contact: linear-gradient(to bottom right,#4b647e,#6a8bad);
     --icon-color: #4b647e;
     --border-color: white;
     --button-color: #007bff;
@@ -96,4 +98,32 @@ footer .jumbotron {
     p {
         font-size: 16px;
     }
+}
+
+/* Buttons */
+.btn {
+    color: white;
+}
+.btn:focus {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+.btn:active, .btn:hover {
+    color: white;
+    border-color: var(--button-color);
+}
+
+.btn-custom {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
+}
+
+.btn-custom:hover {
+    background-color: var(--hover-button-color);
+    border-color: var(--button-color);
+}
+
+.btn-custom, .btn-custom:active, .btn-custom:focus {
+    background-color: var(--button-color);
+    border-color: var(--button-color);
 }
