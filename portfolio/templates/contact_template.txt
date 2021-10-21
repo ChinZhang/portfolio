@@ -1,11 +1,4 @@
-Contact Name:
-{{ name }}
+Contact Name: {{ name }}
+Reply to email: {{ email }}
 
-Email:
-{{ email }}
-
-Subject:
-{{ subject }}
-
-Message:
 {{ message }}

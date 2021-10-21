@@ -1,12 +1,12 @@
 
 :root {
-    --background-color: #F5F5F5;
+    --background-color: #f7f2f4;
     --secondary-background-color: #fffafc;
     --third-background-color: #dd5f88;
     --font-color: #222;
-    --font-secondary-color: #dd5f88 ;
-    --background-gradient: linear-gradient(to right,#dd5f88,#db2561);
-    --icon-color: #ff3333;
+    --font-secondary-color: #dd5f88;
+    --background-gradient: linear-gradient(to right,#dd5f88,#de3c71);
+    --icon-color: #de3c71;
     --border-color: black;
     --button-color: #e6004a;
     --hover-button-color: #c2003e;
@@ -24,7 +24,7 @@
     --font-color: #f5f7fa;
     --font-secondary-color: #9fb3c8;
     --background-gradient: linear-gradient(to right,#4b647e,#6a8bad);
-    --icon-color: #121365;
+    --icon-color: #4b647e;
     --border-color: white;
     --button-color: #007bff;
     --hover-button-color: #0069d9;

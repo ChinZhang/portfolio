@@ -6,6 +6,8 @@ from contact.forms import ContactForm
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
 from django.http import HttpResponse
+from django.conf import settings
+from django.core.mail import send_mail
 
 
 def landing(request):
@@ -38,14 +40,12 @@ def home(request):
                 'message': message,
             }
             content = template.render(context)
-            email = EmailMessage(
-                "New contact form submission",
-                content,
-                "Your website" + '',
-                ['chinzh00@gmail.com'],
-                headers={'Reply to': email}
-            )
-            email.send()
+            send_mail(str(subject), str(content),
+                      settings.DEFAULT_FROM_EMAIL,
+                      [
+                          settings.EMAIL_HOST_USER,
+                          'chin.portfolio.contact@gmail.com',
+                      ])
             return HttpResponse('Thanks for contacting me!')
 
     # Renders all the subsections into the homepage template

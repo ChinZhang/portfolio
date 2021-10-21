@@ -48,13 +48,30 @@ h1 {
     border-top: none;
 }
 
-.btn-primary {
+.btn {
+    color: white;
+}
+.btn:focus {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+.btn:active, .btn:hover {
+    color: white;
+    border-color: var(--button-color);
+}
+
+.btn-custom {
     background-color: var(--button-color);
     border-color: var(--button-color);
 }
 
-.btn-primary:hover {
+.btn-custom:hover {
     background-color: var(--hover-button-color);
+    border-color: var(--button-color);
+}
+
+.btn-custom, .btn-custom:active, .btn-custom:focus {
+    background-color: var(--button-color);
     border-color: var(--button-color);
 }
 
