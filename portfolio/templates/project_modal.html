@@ -7,10 +7,13 @@
 <body>
 
 <div class="modal fade" id="projectModal{{ project.id }}" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header modal-color">
-                    <span class="modal-title h3">{{ project.title }}</span>
+                    <span class="modal-title h3">
+                        <a href="{{ project.github_link }}" target="blank" class="{{ project.github_icon }} github-icon"></a>
+                        {{ project.title }}
+                    </span>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -39,11 +42,19 @@
                         </a>
                     </div>
                     <div class="text-container">
-                        <h4>Description</h4>
+                        <h5>Description</h5>
                         <p>{{ project.description|linebreaks }}</p>
-                        <h4>My Experience</h4>
+                        <p>Built With: {{ project.technology }}</p>
+                        <h5>My Experience</h5>
                         <p>{{ project.experience|linebreaks }}</p>
+                        <p><b>Link:</b>
+                            <a href="{{ project.project_link }}">{{ project.project_link }}</a>
+                            {{ project.disclaimer }}
+                        </p>
                     </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
