@@ -1,10 +1,10 @@
 from django import forms
 
 SUBJECTS = (
-    ('networking', 'Networking'),
-    ('career', 'Career Opportunities'),
-    ('questions', 'Questions'),
-    ('comments', 'Comments/Suggestions'),
+    ('Networking', 'Networking'),
+    ('Career', 'Career Opportunities'),
+    ('Questions', 'Questions'),
+    ('Comments/Suggestions', 'Comments/Suggestions'),
 )
 
 

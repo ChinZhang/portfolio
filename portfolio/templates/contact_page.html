@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <title>Contact Me</title>
     <link rel="stylesheet" href="{% static "/css/form.css" %}">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 </body>
+
     {% load crispy_forms_tags %}
     <div class="jumbotron jumbotron-fluid center" id="contact-jumbotron">
         <h1>Contact Me</h1>
             <div class="container-sm" id="form-container">
-                    <a href="mailto:chin.portfolio.contact@gmail.com" class="fa fa-envelope" id="envelope"></a>
-                    <p><b>Have any questions or comments?</b></p>
-                    <p>Feel free to contact me using the mail icon or by filling out the form below!</p>
-                <form method="post">
+                <a href="mailto:chin.portfolio.contact@gmail.com" class="fa fa-envelope" id="envelope"></a>
+                <p><b>Have any questions or comments?</b></p>
+                <p>Feel free to contact me using the mail icon or by filling out the form below!</p>
+
+                <form method="post" id="contactform">
                     {% csrf_token %}
                     {{form | crispy}}
+                    <div class="g-recaptcha" data-sitekey="6Lf5xvkcAAAAALap5W6b2om5F1gsOMrRWpUAbo66"></div>
                     <button type="submit" class="btn-custom btn-primary btn-lg btn-block">Submit</button>
                 </form>
             </div>
