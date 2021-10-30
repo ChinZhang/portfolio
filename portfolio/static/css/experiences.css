@@ -14,12 +14,12 @@
     margin: auto;
 }
 
-.main-timeline:after{
+.main-timeline:after {
     content: '';
     display: block;
     clear: both;
 }
-.main-timeline:before{
+.main-timeline:before {
     content: '';
     background-color: var(--font-secondary-color);
     height: 100%;
@@ -29,7 +29,7 @@
     top: 0;
     left: 50%;
 }
-.main-timeline .timeline{
+.timeline {
     width: 50%;
     padding: 0 100px 0 0;
     margin: 0 10px 20px 0;
@@ -37,7 +37,7 @@
     position: relative;
     z-index: 1;
 }
-.main-timeline .timeline:before{
+.timeline:before {
     content: '';
     background-color: var(--font-secondary-color);
     height: 5px;
@@ -47,7 +47,7 @@
     top: 50px;
     z-index: -1;
 }
-.main-timeline .timeline-content{
+.timeline-content {
     color: #555;
     background-color: #fff;
     text-align: center;
@@ -56,11 +56,8 @@
     display: block;
     box-shadow: var(--shadow);
 }
-.main-timeline .timeline-content:hover {
-    text-decoration: none;
-}
 
-.main-timeline .timeline-year{
+.timeline-year {
     background: var(--background-gradient);
     font-size: 25px;
     font-weight: 600;
@@ -74,7 +71,7 @@
     top: 0;
     z-index: 1;
 }
-.main-timeline .timeline-year:before{
+.timeline-year:before {
     content: '';
     background-color: #fff;
     height: 80%;
@@ -86,43 +83,48 @@
     top: 50%;
     z-index: -1;
 }
-.main-timeline .timeline-icon{
+.timeline-icon {
     color: var(--icon-color);
     font-size: 35px;
 }
 
-.main-timeline .title{
+.title {
     color: #fff;
     background: var(--background-gradient);
     padding: 10px;
     margin: 0 0 10px;
     border-radius: 20px 20px 0 0;
 }
-.main-timeline .description{
-    font-size: 15px;
+
+.description {
     letter-spacing: 1px;
     margin: 0 15px;
 }
 
-.main-timeline .timeline:nth-child(even){
+.timeline:nth-child(even) {
     padding: 0 0 0 100px;
     margin: 0 0 20px 10px;
     float: right;
 }
 
-.main-timeline .timeline:nth-child(even):before{
+.timeline:nth-child(even):before{
     right: auto;
     left: 50px;
 }
 
-.main-timeline .timeline:nth-child(even) .timeline-year{
+.timeline:nth-child(even) .timeline-year {
     right: auto;
     left: -50px;
 }
 
-.main-timeline .timeline:nth-child(even) .timeline-icon{
+.timeline:nth-child(even) .timeline-icon {
     right: auto;
     left: 20px;
+}
+
+.paragraph-div {
+    margin-right: 10px;
+    margin-left: 12px;
 }
 
 /*.main-timeline .timeline:nth-child(4n+2) .timeline-year, .main-timeline .timeline:nth-child(4n+2) .title {*/
@@ -141,23 +143,19 @@
 /*}*/
 
 /* Reponsiveness for Timeline */
-@media screen and (max-width:767px){
-    .main-timeline .timeline,
-    .main-timeline .timeline:nth-child(even){
+@media screen and (max-width:767px) {
+    .timeline,
+    .timeline:nth-child(even) {
         width: 100%;
         padding: 95px 0 0;
         margin: 0 0 20px;
         float: none;
     }
-    .main-timeline .timeline:before{ display: none; }
+    .main-timeline .timeline:before { display: none; }
     .main-timeline .timeline-year,
-    .main-timeline .timeline:nth-child(even) .timeline-year{
+    .main-timeline .timeline:nth-child(even) .timeline-year {
         left: 50%;
         transform: translateX(-50%);
     }
-}
-
-@media screen and (max-width:567px){
-    .main-timeline .title{ font-size: 18px; }
 }
 

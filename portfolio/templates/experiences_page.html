@@ -31,7 +31,9 @@
                                         </a>
                                 </div>
                                 <span><b>{{ experience.date_range }}</b></span>
-                                <p class="description">{{ experience.description|linebreaks}}</p>
+                                <div class="paragraph-div">
+                                    <p class="description">{{ experience.description|linebreaks }}</p>
+                                </div>
                             </div>
                         </div>
                         {% endfor %}

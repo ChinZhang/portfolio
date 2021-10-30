@@ -40,8 +40,12 @@ p {
     font-size: 18px;
 }
 
+@media screen and (max-width:567px){
+    .p { font-size: 16px; }
+}
+
 /* Navigation Bar */
- .navbar {
+.navbar {
      margin-bottom: 0;
      background-color: var(--background-color);
      border: 0;
@@ -157,3 +161,4 @@ footer .jumbotron {
 #icons-footer:hover {
     color: var(--font-secondary-color);
 }
+
