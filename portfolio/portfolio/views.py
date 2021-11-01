@@ -1,13 +1,9 @@
 import requests
-from django.shortcuts import render, get_object_or_404
 from project.models import Project
 from project.models import ProjectImage
 from experience.models import Experience
 from contact.forms import ContactForm
 from django.template.loader import get_template
-from django.core.mail import EmailMessage
-from django.http import HttpResponse
-from django.conf import settings
 from django.core.mail import send_mail
 import json
 from django.shortcuts import render, redirect
@@ -36,7 +32,6 @@ def home(request):
             cap_secret = settings.GOOGLE_RECAPTCHA_SECRET_KEY
             cap_data = {"secret": cap_secret, "response": captcha_token}
             cap_server_response = requests.post(url=cap_url, data=cap_data)
-            print(cap_server_response.text)
             result = json.loads(cap_server_response.text)
             if result['success']:
                 name = request.POST.get('name', '')
@@ -58,10 +53,12 @@ def home(request):
                               settings.EMAIL_HOST_USER,
                               'chin.portfolio.contact@gmail.com',
                           ])
-                messages.success(request, 'New comment added with success!')
-                form = ContactForm()
+                messages.success(request, 'Your message was successfully sent!')
+                return redirect('/home/#section4')
             else:
                 messages.error(request, 'Invalid reCAPTCHA. Please try again.')
+                return redirect('/home/#section4')
+
     # Renders all the subsections into the homepage template
     context = {'form': form, 'projects': projects, 'experiences': experiences, 'photos': photos}
     return render(request, '../templates/home_page.html', context)
