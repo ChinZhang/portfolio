@@ -11,10 +11,6 @@ from django.conf import settings
 from django.contrib import messages
 
 
-def landing(request):
-    return render(request, '../templates/landing_page.html')
-
-
 # Shows the homepage
 def home(request):
     # Calls functions for each section in the homepage
