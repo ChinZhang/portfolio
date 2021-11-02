@@ -8,9 +8,9 @@
     --background-gradient: linear-gradient(to right,#dd5f88,#de3c71);
     --background-gradient-contact: linear-gradient(to bottom right,#dd5f88,#de3c71);
     --icon-color: #e6004a;
-    --border-color: black;
     --button-color: #e6004a;
     --hover-button-color: #c2003e;
+    --header-color: #555;
     --background-image: url("../resources/flower.jpg");
     --background-image-medium: url("../resources/flower-medium.jpg");
     --background-image-small: url("../resources/flower-small.jpg");
@@ -27,9 +27,9 @@
     --background-gradient: linear-gradient(to right,#4b647e,#6a8bad);
     --background-gradient-contact: linear-gradient(to bottom right,#4b647e,#6a8bad);
     --icon-color: #007bff;
-    --border-color: white;
     --button-color: #007bff;
     --hover-button-color: #0069d9;
+    --header-color: white;
     --background-image: url("../resources/droplets.jpg");
     --background-image-medium: url("../resources/droplets_medium.jpg");
     --background-image-small: url("../resources/droplets_small.jpg");
@@ -85,11 +85,14 @@ p {
     background-color: var(--font-color) !important;
 }
 
-h1 {
-    border-bottom: solid;
-    border-color: var(--border-color);
-    padding-bottom: 20px;
-    text-align: center;
+.header-border {
+    border-bottom: 1px solid var(--third-background-color);
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+.heading {
+    color: var(--header-color);
 }
 
 footer .jumbotron {
