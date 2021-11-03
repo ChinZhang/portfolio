@@ -42,15 +42,34 @@
                         </a>
                     </div>
                     <div class="text-container">
-                        <h5>Description</h5>
-                        <p>{{ project.description|linebreaks }}</p>
-                        <p>Built With: {{ project.technology }}</p>
-                        <h5>My Experience</h5>
-                        <p>{{ project.experience|linebreaks }}</p>
-                        <p><b>Link:</b>
+                        <hr>
+                        <span><b>Link:</b>
                             <a href="{{ project.project_link }}">{{ project.project_link }}</a>
                             {{ project.disclaimer }}
-                        </p>
+                        </span><br>
+                        <span><b>Built With:</b> {{ project.technology }}</span><br>
+                        <span><b>{{ project.class_event }}</b></span>
+                        <hr>
+                        <h5>Description</h5>
+                        <p>{{ project.description|linebreaks }}</p>
+                        <hr>
+                        <h5>Role and Experience: <span class="role-text">{{ project.role }}</span></h5>
+                        <p>{{ project.experience|linebreaks }}</p>
+                        <hr>
+                        <h5>Topics Learned</h5>
+                        <ul>
+                            {% for topic in topics %}
+                                {% if topic.project == project %}
+                                    <li>{{ topic.topics }}</li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                        <hr>
+                        <h5>Reflection</h5>
+                        <p>{{ project.reflection|linebreaks }}</p>
+                        <hr>
+                        <h5>Potential Improvements</h5>
+                        <p>{{ project.improvements|linebreaks }}</p>
                     </div>
                 </div>
                 <div class="modal-footer">

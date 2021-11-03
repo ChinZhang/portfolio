@@ -1,6 +1,7 @@
 import requests
 from project.models import Project
 from project.models import ProjectImage
+from project.models import TopicsLearnedList
 from experience.models import Experience
 from contact.forms import ContactForm
 from django.template.loader import get_template
@@ -17,6 +18,7 @@ def home(request):
     experiences = experience_section()
     projects = project_section()
     photos = project_images()
+    topics = project_learned_topics()
     form = ContactForm()
 
     # Handles information from the contact form
@@ -56,7 +58,7 @@ def home(request):
                 return redirect('/home/#section4')
 
     # Renders all the subsections into the homepage template
-    context = {'form': form, 'projects': projects, 'experiences': experiences, 'photos': photos}
+    context = {'form': form, 'projects': projects, 'experiences': experiences, 'photos': photos, 'topics': topics}
     return render(request, '../templates/home_page.html', context)
 
 
@@ -76,6 +78,12 @@ def project_section():
 def project_images():
     photos = ProjectImage.objects.all()
     return photos
+
+
+# Returning learned topic list for all projects
+def project_learned_topics():
+    topics = TopicsLearnedList.objects.all()
+    return topics
 
 
 # Creating the view for the contact form section
