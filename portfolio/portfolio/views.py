@@ -52,10 +52,10 @@ def home(request):
                               'chin.portfolio.contact@gmail.com',
                           ])
                 messages.success(request, 'Your message was successfully sent!')
-                return redirect('/home/#section4')
+                return redirect('/#section4')
             else:
                 messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-                return redirect('/home/#section4')
+                return redirect('/#section4')
 
     # Renders all the subsections into the homepage template
     context = {'form': form, 'projects': projects, 'experiences': experiences, 'photos': photos, 'topics': topics}
@@ -64,13 +64,13 @@ def home(request):
 
 # Creating the view for experience subsection
 def experience_section():
-    experiences = Experience.objects.order_by('year').reverse()
+    experiences = Experience.objects.order_by('year')
     return experiences
 
 
 # Creating the view for the project section
 def project_section():
-    projects = Project.objects.order_by('year').reverse()
+    projects = Project.objects.order_by('year')
     return projects
 
 
