@@ -40,6 +40,18 @@
     --shadow: -1px 6px 13px 0px rgba(0,0,0,0.44);
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+:target:before {
+    content: "";
+    display: block;
+    height: 65px;
+    color: var(--secondary-background-color);
+    margin: -65px 0 0;
+}
+
 p {
     font-size: 17px;
 }
@@ -174,7 +186,6 @@ footer .jumbotron {
 .modal-body, .modal-header, .modal-footer {
     background-color: var(--secondary-background-color);
     color: var(--text-color);
-    border-radius: 10px
 }
 
 hr {

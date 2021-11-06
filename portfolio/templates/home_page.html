@@ -12,7 +12,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-    <body data-spy="scroll" data-target=".navbar">
+    <body>
         <header>
             <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
                 <a class="navbar-brand" href="#section1"><div class="brand-color">Chin Zhang</div></a>
@@ -25,7 +25,7 @@
                         <li class="nav-item"><a class="nav-link" href="#section2"><div class="nav-color">Experiences</div></a></li>
                         <li class="nav-item"><a class="nav-link" href="#section3"><div class="nav-color">Projects</div></a></li>
                         <li class="nav-item"><a class="nav-link" href="#section4"><div class="nav-color">Contact Me</div></a></li>
-                        <li class="nav-item"><a class="nav-link" type="button" data-toggle="modal" data-target="#myModal"><div class="nav-color">Resume</div></a></li>
+                        <li class="nav-item"><a class="nav-link" type="button" data-toggle="modal" data-target="#resume-modal"><div class="nav-color">Resume</div></a></li>
                     </ul>
                 </div>
             </nav>
@@ -57,7 +57,7 @@
                     <a href="https://github.com/ChinZhang" target="blank" class="fa fa-github" id="icons-footer" ></a>
                     <a href="https://www.linkedin.com/in/chin-zhang-436b48164/" target="blank" class="fa fa-linkedin" id="icons-footer"></a>
                     <a href="https://www.instagram.com/drachix_x/" target="blank" class="fa fa-instagram" id="icons-footer"></a>
-                    <a href="mailto:chinzh00@gmail.com" class="fa fa-envelope" id="icons-footer"></a>
+                    <a href="mailto:chin.portfolio.contact@gmail.com" class="fa fa-envelope" id="icons-footer"></a>
                 </div>
             </div>
         </footer>
@@ -67,51 +67,42 @@
 <script>
     {# Scroll Implementation #}
     $(document).ready(function(){
-        const offset = 65;
-
-        $("#navbar a").on('click', function(event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-
-             $($(this).attr('href'))[0].scrollIntoView();
-                scrollBy(0, -offset);
-        }
-    });
-
-    {# Darkmode and Light mode for toggle and resume #}
-    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-    const currentTheme = localStorage.getItem('theme');
-
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-
-        if (currentTheme === 'dark') {
-            toggleSwitch.checked = true;
-            document.getElementById("resume").src="../static/resources/resumes/ResumeDarkMode.pdf"
-        } else {
-            document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf"
-        }
-    }
 
 
-    function switchTheme(e, persist = false) {
-        if (e.target.checked) {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-            document.getElementById("resume").src="../static/resources/resumes/ResumeDarkMode.pdf";
-        }
-        else {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-            document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf";
+        {# Darkmode and Light mode for toggle and resume #}
+        const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme) {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+
+            if (currentTheme === 'dark') {
+                toggleSwitch.checked = true;
+                document.getElementById("resume").src="../static/resources/resumes/ResumeDarkMode.pdf"
+            } else {
+                document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf"
+            }
         }
 
-    }
 
-    toggleSwitch.addEventListener('change', switchTheme, false);
+        function switchTheme(e, persist = false) {
+            if (e.target.checked) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+                document.getElementById("resume").src="../static/resources/resumes/ResumeDarkMode.pdf";
+            }
+            else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf";
+            }
 
-    const osPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    const preferredTheme = localStorage.getItem('preferred-theme') || osPreference;
+        }
+
+        toggleSwitch.addEventListener('change', switchTheme, false);
+
+        const osPreference = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        const preferredTheme = localStorage.getItem('preferred-theme') || osPreference;
 
     });
 </script>
