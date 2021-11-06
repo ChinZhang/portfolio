@@ -8,8 +8,8 @@
     --font-secondary-color: #b51f4f;
     --background-gradient: linear-gradient(to right,#dd5f88,#de3c71);
     --background-gradient-contact: linear-gradient(to bottom right,#dd5f88,#de3c71);
-    --icon-color: #e6004a;
-    --button-color: #e6004a;
+    --icon-color: #d60045;
+    --button-color: #d60045;
     --hover-button-color: #c2003e;
     --header-color: #555;
     --hr-color: rgba(0,0,0,.1);
@@ -40,7 +40,7 @@
     --shadow: -1px 6px 13px 0px rgba(0,0,0,0.44);
 }
 
-p, span {
+p {
     font-size: 17px;
 }
 
@@ -63,7 +63,7 @@ p, span {
 .brand-color {
     padding-left: 10px;
     font-weight: bold;
-    font-size: larger;
+    font-size: 25px;
     color: var(--font-color);
 }
 
@@ -73,14 +73,14 @@ p, span {
 
 .nav-color {
     color: var(--font-color);
-    font-size: large;
+    font-size: 18px;
     padding-left: 20px;
     padding-right: 10px;
 }
 
 .nav-color:hover {
     color: var(--font-secondary-color);
-    font-size: larger;
+    font-size: 20px;
 }
 
 .navbar li a{
@@ -174,6 +174,7 @@ footer .jumbotron {
 .modal-body, .modal-header, .modal-footer {
     background-color: var(--secondary-background-color);
     color: var(--text-color);
+    border-radius: 10px
 }
 
 hr {
