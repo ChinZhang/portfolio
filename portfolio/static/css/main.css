@@ -91,6 +91,10 @@ p, span {
     background-color: var(--font-color) !important;
 }
 
+.fa-fw {
+    color: var(--secondary-background-color);
+}
+
 .header-border {
     border-bottom: 1px solid var(--third-background-color);
     padding-bottom: 15px;
@@ -150,6 +154,7 @@ footer .jumbotron {
     padding: 15px;
 }
 
+/* Footer */
 #icons-footer {
     background: var(--secondary-background-color);
     color: var(--font-color);
@@ -165,6 +170,7 @@ footer .jumbotron {
     color: var(--font-secondary-color);
 }
 
+/* Modal Styles*/
 .modal-body, .modal-header, .modal-footer {
     background-color: var(--secondary-background-color);
     color: var(--text-color);
