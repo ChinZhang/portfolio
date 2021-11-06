@@ -3,6 +3,7 @@
     --background-color: #f7f2f4;
     --secondary-background-color: #fffafc;
     --third-background-color: #dd5f88;
+    --text-color: #555;
     --font-color: #222;
     --font-secondary-color: #b51f4f;
     --background-gradient: linear-gradient(to right,#dd5f88,#de3c71);
@@ -11,6 +12,7 @@
     --button-color: #e6004a;
     --hover-button-color: #c2003e;
     --header-color: #555;
+    --hr-color: rgba(0,0,0,.1);
     --background-image: url("../resources/flower.jpg");
     --background-image-medium: url("../resources/flower-medium.jpg");
     --background-image-small: url("../resources/flower-small.jpg");
@@ -22,6 +24,7 @@
     --background-color: #0d1a26;
     --secondary-background-color: #263341;
     --third-background-color: #4b647e;
+    --text-color: #F0F0F0;
     --font-color: #f5f7fa;
     --font-secondary-color: #9fb3c8;
     --background-gradient: linear-gradient(to right,#4b647e,#6a8bad);
@@ -30,18 +33,21 @@
     --button-color: #007bff;
     --hover-button-color: #0069d9;
     --header-color: white;
+    --hr-color: rgb(200,200,200);
     --background-image: url("../resources/droplets.jpg");
     --background-image-medium: url("../resources/droplets_medium.jpg");
     --background-image-small: url("../resources/droplets_small.jpg");
     --shadow: -1px 6px 13px 0px rgba(0,0,0,0.44);
 }
 
-p {
-    font-size: 18px;
+p, span {
+    font-size: 17px;
 }
 
-@media screen and (max-width:567px){
-    .p { font-size: 16px; }
+@media screen and (max-width:400px){
+    p, span {
+        font-size: 15px;
+    }
 }
 
 /* Navigation Bar */
@@ -101,12 +107,6 @@ footer .jumbotron {
     padding: 22px;
 }
 
-@media screen and (max-width:530px){
-    p {
-        font-size: 16px;
-    }
-}
-
 /* Buttons */
 .btn {
     color: white;
@@ -163,4 +163,13 @@ footer .jumbotron {
 
 #icons-footer:hover {
     color: var(--font-secondary-color);
+}
+
+.modal-body, .modal-header, .modal-footer {
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+}
+
+hr {
+    background-color: var(--hr-color);
 }
