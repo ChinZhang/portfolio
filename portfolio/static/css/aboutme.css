@@ -119,10 +119,10 @@ h2 {
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:550px) {
     .jumbotron img {
-        width: 150px;
-        height: 150px;
+        width: 140px;
+        height: 140px;
     }
 
     #icons {
@@ -130,6 +130,24 @@ h2 {
         height: 60px;
         font-size: 25px;
         padding: 18px;
+    }
+
+    #about-me-jumbotron {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .jumbotron img {
+        width: 130px;
+        height: 130px;
+    }
+
+    #icons {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        padding: 16px;
     }
 
     #about-me-jumbotron {
