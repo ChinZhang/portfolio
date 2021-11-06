@@ -5,12 +5,12 @@ Project Link: [https://chinzhang.com/](https://chinzhang.com/)
 
 ### Built With
 
-* [Django]
-* [Bootstrap]
-* [HTML]
-* [CSS]
-* [Javascript]
-* [SQLite]
+* Django
+* Bootstrap
+* HTML
+* CSS
+* Javascript
+* SQLite
 
 <!-- GETTING STARTED -->
 ## Getting Started
