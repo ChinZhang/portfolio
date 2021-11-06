@@ -7,7 +7,7 @@ class Experience(models.Model):
     company = models.TextField(blank=True)
     location = models.TextField(default='')
     link = models.URLField(default='')
-    description = models.TextField(default=True)
+    description = models.TextField(blank=True)
     date_range = models.TextField(default='')
     icon = models.TextField(default='')
     year = models.IntegerField(default='')
