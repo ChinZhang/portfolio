@@ -52,10 +52,10 @@ def home(request):
                               'chin.portfolio.contact@gmail.com',
                           ])
                 messages.success(request, 'Your message was successfully sent!')
-                return redirect('/#section4')
+                return redirect('/#ContactMe')
             else:
                 messages.error(request, 'Invalid reCAPTCHA. Please try again.')
-                return redirect('/#section4')
+                return redirect('/#ContactMe')
 
     # Renders all the subsections into the homepage template
     context = {'form': form, 'projects': projects, 'experiences': experiences, 'photos': photos, 'topics': topics}

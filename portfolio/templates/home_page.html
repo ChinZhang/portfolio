@@ -72,15 +72,13 @@
         {# Darkmode and Light mode for toggle and resume #}
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
         const currentTheme = localStorage.getItem('theme');
+        document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf";
 
         if (currentTheme) {
             document.documentElement.setAttribute('data-theme', currentTheme);
 
             if (currentTheme === 'dark') {
                 toggleSwitch.checked = true;
-                document.getElementById("resume").src="../static/resources/resumes/ResumeDarkMode.pdf"
-            } else {
-                document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf"
             }
         }
 
@@ -88,13 +86,13 @@
         function switchTheme(e, persist = false) {
             if (e.target.checked) {
                 document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
                 document.getElementById("resume").src="../static/resources/resumes/ResumeDarkMode.pdf";
+                localStorage.setItem('theme', 'dark');
             }
             else {
                 document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
                 document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf";
+                localStorage.setItem('theme', 'light');
             }
 
         }
