@@ -3,7 +3,7 @@
     background-image: var(--background-image);
     background-size: 100% 100%;
     margin: 0px;
-    min-height: 900px;
+    min-height: 1020px;
 }
 
 /* Toggler */
@@ -105,7 +105,8 @@ input:checked + .slider:before {
     background: var(--background-color);
     color: var(--font-color);
     opacity: 85%;
-    padding: 40px;
+    margin-top: 45px;
+    padding: 80px;
 }
 
 h2 {
@@ -132,9 +133,6 @@ h2 {
         padding: 18px;
     }
 
-    #about-me-jumbotron {
-        padding: 30px;
-    }
 }
 
 @media screen and (max-width:400px) {
@@ -150,19 +148,44 @@ h2 {
         padding: 16px;
     }
 
-    #about-me-jumbotron {
-        padding: 30px;
-    }
 }
 
-@media screen and (max-width:1000px) {
+h2 {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:1250px) {
     #jumbotron-elements {
         background-image: var(--background-image-medium);
     }
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:900px) {
     #jumbotron-elements {
         background-image: var(--background-image-small);
     }
+}
+
+@media screen and (max-width:600px) {
+    #jumbotron-elements {
+        background-image: var(--background-image-xsmall);
+    }
+}
+
+@media screen and (max-width:1650px) {
+    #jumbotron-elements {
+        min-height: 900px;
+    }
+
+    #about-me-jumbotron {
+        padding: 50px;
+        margin-top: 20px;
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+
 }

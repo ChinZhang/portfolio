@@ -16,6 +16,7 @@
     --background-image: url("../resources/flower.jpg");
     --background-image-medium: url("../resources/flower-medium.jpg");
     --background-image-small: url("../resources/flower-small.jpg");
+    --background-image-xsmall: url("../resources/flower-xsmall.jpg");
     --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
@@ -37,6 +38,7 @@
     --background-image: url("../resources/droplets.jpg");
     --background-image-medium: url("../resources/droplets_medium.jpg");
     --background-image-small: url("../resources/droplets_small.jpg");
+    --background-image-xsmall: url("../resources/droplets_xsmall.jpg");
     --shadow: -1px 6px 13px 0px rgba(0,0,0,0.44);
 }
 
@@ -57,7 +59,7 @@ p {
 }
 
 @media screen and (max-width:400px){
-    p, span {
+    p {
         font-size: 15px;
     }
 }
