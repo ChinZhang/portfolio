@@ -193,3 +193,7 @@ footer .jumbotron {
 hr {
     background-color: var(--hr-color);
 }
+
+.close-modal {
+    color: var(--text-color);
+}

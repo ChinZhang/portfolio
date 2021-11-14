@@ -72,15 +72,19 @@
         {# Darkmode and Light mode for toggle and resume #}
         const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
         const currentTheme = localStorage.getItem('theme');
-        document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf";
 
         if (currentTheme) {
             document.documentElement.setAttribute('data-theme', currentTheme);
 
             if (currentTheme === 'dark') {
                 toggleSwitch.checked = true;
+                document.getElementById("resume").src="../static/resources/resumes/ResumeDarkMode.pdf";
+            } else {
+                toggleSwitch.checked = false;
+                document.getElementById("resume").src="../static/resources/resumes/ResumeLightMode.pdf";
             }
         }
+
 
 
         function switchTheme(e, persist = false) {
